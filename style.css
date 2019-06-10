@@ -1,12 +1,18 @@
 :root {
   --primary-color: #e50914;
+  --dark-color: #141414;
 }
 
 /*                                      GENERAL                                                  */
+html {
+  width: 100vmax;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -35,6 +41,7 @@ p {
   margin: 0.5rem 0;
 }
 
+/*        SHOWCASE      */
 .showcase {
   position: relative;
   height: 100vh;
@@ -128,4 +135,47 @@ p {
 }
 .btn-rounded {
   border-radius: 4px;
+}
+
+/*            tabs                */
+
+.container {
+  max-width: 75%;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.tabs {
+  background-color: var(--dark-color);
+  border-bottom: 3px #3d3d3d solid;
+  overflow: hidden;
+}
+
+.tabs .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.tabs p {
+  font-size: 1rem;
+  font-weight: bold;
+  padding-top: 0.2rem;
+}
+
+.tabs .container > div {
+  padding: 1.5rem 0;
+  overflow: hidden;
+}
+
+.tabs .container > div:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.tab-border {
+  border-bottom: var(--primary-color) solid 4px;
 }
